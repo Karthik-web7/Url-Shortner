@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fancy URL Shortener</title>
+    <title>Karthik Event Management</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
@@ -48,6 +48,7 @@
 
         form {
             display: flex;
+            flex-direction: column;
             margin-bottom: 2rem;
             overflow: hidden;
             border-radius: 50px;
@@ -132,6 +133,38 @@
         .refresh-btn:hover {
             background-color: #ff9a9e;
             color: white;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (min-width: 600px) {
+            form {
+                flex-direction: row; /* Align form elements horizontally for larger screens */
+            }
+
+            input[type="url"] {
+                flex-grow: 1;
+                padding: 1rem 1.5rem;
+            }
+
+            button {
+                padding: 1rem 2rem;
+                flex-shrink: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem; /* Adjust font size for smaller screens */
+            }
+
+            .container {
+                padding: 2rem; /* Reduce padding for smaller screens */
+            }
+
+            button {
+                width: 100%; /* Make button full-width on smaller screens */
+                margin-top: 1rem; /* Add margin for spacing */
+            }
         }
     </style>
 </head>
